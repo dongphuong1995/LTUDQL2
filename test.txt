@@ -1,0 +1,14 @@
+<Grid> 
+      <DataGrid Name = "dataGrid" AlternatingRowBackground = "LightBlue"  
+         AlternationCount = "2" AutoGenerateColumns = "False"> 
+			
+         <DataGrid.Columns> 
+            <DataGridTextColumn Header = "Name" Binding = "{Binding Name}" /> 
+            <DataGridTextColumn Header = "Title" Binding = "{Binding Title}" /> 
+            <DataGridCheckBoxColumn Header = "ReElected?" Binding = "{Binding WasReElected}"/> 
+            <DataGridComboBoxColumn Header = "Party" SelectedItemBinding = "{Binding Affiliation}" 
+               ItemsSource = "{Binding Source = {StaticResource myEnum}}" /> 
+         </DataGrid.Columns> 
+			
+      </DataGrid> 
+   </Grid> 
